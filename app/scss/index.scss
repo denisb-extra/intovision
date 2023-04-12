@@ -244,12 +244,26 @@ section.slider-top {
 
 /* ---------------------- Section services ---------------------- */
 section.services {
-    height: 967px;
+    height: 100vh;
     position: relative;
+
+    #title-animated span {
+        position: relative;
+        display: inline-block;
+    }
 
     .part-static {
         position: relative;
         z-index: 10;
+    }
+
+    .animated {
+        position: relative;
+    }
+
+    .part-static {
+        position: relative;
+        z-index: 99;
     }
 
     .slides {
@@ -260,9 +274,12 @@ section.services {
         right: 0;
 
         .slide {
+            position: absolute;
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
+            
             .parts {
                 .part {
                     &.part-text {
@@ -278,7 +295,24 @@ section.services {
                 right: 0;
                 font-size: 0;
             }
+            .image {
+                text-align: center;
+            }
         }
     }
 }
 /* --------------------- /Section services ---------------------- */
+
+
+#slide-1 {
+    z-index: 11;
+}
+#slide-2 {
+    z-index: 12;
+}
+#slide-3 {
+    z-index: 13;
+}
+#slide-4 {
+    z-index: 14;
+}

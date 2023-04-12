@@ -428,11 +428,19 @@ section.slider-top {
 /* --------------------- /Section slider-top ---------------------- */
 /* ---------------------- Section services ---------------------- */
 section.services {
-  height: 967px;
+  height: 100vh;
   position: relative; }
+  section.services #title-animated span {
+    position: relative;
+    display: inline-block; }
   section.services .part-static {
     position: relative;
     z-index: 10; }
+  section.services .animated {
+    position: relative; }
+  section.services .part-static {
+    position: relative;
+    z-index: 99; }
   section.services .slides {
     position: absolute;
     top: 0;
@@ -440,6 +448,8 @@ section.services {
     bottom: 0;
     right: 0; }
     section.services .slides .slide {
+      position: absolute;
+      width: 100%;
       height: 100%;
       display: flex;
       align-items: center; }
@@ -452,8 +462,22 @@ section.services {
         bottom: 0;
         right: 0;
         font-size: 0; }
+      section.services .slides .slide .image {
+        text-align: center; }
 
 /* --------------------- /Section services ---------------------- */
+#slide-1 {
+  z-index: 11; }
+
+#slide-2 {
+  z-index: 12; }
+
+#slide-3 {
+  z-index: 13; }
+
+#slide-4 {
+  z-index: 14; }
+
 .alignnone, .aligncenter, .alignright, .alignleft {
   max-width: 50%; }
 

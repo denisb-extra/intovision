@@ -157,25 +157,26 @@
 	<section class="services" id="scene-1">
 		<div class="part-static">
 			<div class="section-inner">
-				<p class="section-title centered white" id="animate1">מה אנחנו <strong>מציעים</strong></p>
+				<div class="section-title centered white" id="title-animated">מה אנחנו מציעים</div>
 			</div>
 		</div>
 		
 		<div class="slides">
-			<div class="slide">
+
+			<div class="slide" id="slide-1">
 				<div class="bg">
 					<img src="images/index/services/bgs/bg-1.png">
 				</div>
 				<div class="section-inner">
-					<div class="parts">
-						<div class="part part-text">
+					<div class="parts ai-center">
+						<div class="part part-text animated" id="ani-text-1">
 							<p class="title-regular white">פיתוח מערכות</p>
 							<div class="content white">
 								<p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנהלפריקך תצטריק לרטי להע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת</p>
 							</div>
 							<a href="#" class="button-arrow">למעבר לגלריה של פיתוח מערכות</a>
 						</div>
-						<div class="part part-image">
+						<div class="part part-image animated" id="ani-image-1">
 							<div class="image">
 								<img src="images/index/services/products/pr-1.png">
 							</div>
@@ -183,6 +184,54 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="slide" id="slide-2">
+				<div class="bg">
+					<img src="images/index/services/bgs/bg-2.png">
+				</div>
+				<div class="section-inner">
+					<div class="parts ai-center">
+						<div class="part part-image animated" id="ani-image-2">
+							<div class="image">
+								<img src="images/index/services/products/pr-2.png">
+							</div>
+						</div>
+						<div class="part part-text animated" id="ani-text-2">
+							<p class="title-regular white">פיתוח מוצרים</p>
+							<div class="content white">
+								<p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנהלפריקך תצטריק לרטי להע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת</p>
+							</div>
+							<a href="#" class="button-arrow">למעבר לגלריה של פיתוח מוצרים</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="slide" id="slide-3">
+				<div class="bg">
+					<img src="images/index/services/bgs/bg-3.png">
+				</div>
+				<div class="section-inner">
+					<div class="parts ai-center">
+						<div class="part part-text animated" id="ani-text-3">
+							<p class="title-regular white">שירותי ייצור</p>
+							<div class="content white">
+								<p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנהלפריקך תצטריק לרטי להע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת</p>
+							</div>
+							<a href="#" class="button-arrow">למעבר לגלריה של שירותי ייצור</a>
+						</div>
+
+						<div class="part part-image animated" id="ani-image-3">
+							<div class="image">
+								<img src="images/index/services/products/pr-3.png">
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
 		</div>
 		
 	</section>
@@ -201,17 +250,55 @@
 		</div>
 	</section>
 	<script>
-		$(document).ready(function ($) {
-			// init controller
+		$(document).ready(function ($) {		
+			$("#title-animated").html(wrappLetterrs($("#title-animated").text()));
+
+			let animationSeq = new TimelineMax();
+			animationSeq.add(
+				TweenMax.staggerFromTo($("#title-animated").find("span"), 0.1, {autoAlpha:0, bottom:"-30px"}, {autoAlpha:1, bottom:"0px"}, 0.1)
+			);
+
+			animationSeq.add(
+				TweenMax.fromTo($("#ani-image-1"), 0.4, {autoAlpha:0, bottom:"-30px"}, {autoAlpha:1, bottom:"0px"}, 0.1)
+			);
+
+			animationSeq.add(
+				TweenMax.fromTo($("#ani-text-1"), 0.4, {autoAlpha:0, top:"-30px"}, {autoAlpha:1, top:"0px"}, 0.1)
+			);
+
+			for (let i = 0; i < 3; i++) {
+				animationSeq.add(
+					TweenMax.fromTo($("#slide-" + (i + 2)), 0.4, {autoAlpha:0, top:"300px"}, {autoAlpha:1, top:"0px"}, 0.1)
+				);
+
+				animationSeq.add(
+					TweenMax.fromTo($("#ani-text-" + (i + 2)), 0.4, {autoAlpha:0, top:"-30px"}, {autoAlpha:1, top:"0px"}, 0.1)
+				);
+			}
+			
+
 			var controller = new ScrollMagic.Controller();
+			var sectionHeight = $("section.services").innerHeight();
+			console.log(sectionHeight);
 
 			var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 7000})
 					.setPin("#scene-1")
-					.setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5})
-					.addIndicators() // add indicators (requires plugin)
+					.setTween(animationSeq)
+					//.addIndicators()
 					.addTo(controller);
+					scene.offset(sectionHeight/2);
 
 		});
+
+		function wrappLetterrs(str) {
+			let result = '';
+			let text = str.split("");
+			text.forEach(function(char){
+				if(char == " ") char = "&nbsp";
+				result += "<span>" + char + "</span>";
+			});
+			return result;
+		}
 	</script>
 </body>
 </html>
