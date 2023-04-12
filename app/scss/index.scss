@@ -1,0 +1,284 @@
+/* ---------------------- header ---------------------- */
+header {
+    height: 100px;
+    position: relative;
+    z-index: 99;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    &.home {
+        background: transparent;
+    }
+    .section-inner {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .part-right, .part-left {
+            flex: 1 0;
+        }
+
+        .part-left {
+            text-align: left;
+        }
+    }
+
+    .button {
+        @include f-os-r;
+        font-size: 21px;
+        color: var(--color-text);
+        border-radius: 6px;
+        background: #ff687b;
+        white-space: nowrap;
+        padding: 5px 20px;
+        strong {
+            @include f-os-xb;
+        }
+
+        transition: 0.5s;
+        &:hover {
+            background: #E4EF00;
+        }
+    }
+}
+/* --------------------- /header ---------------------- */ 
+.menu-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+
+    padding-top: 250px;
+    padding-bottom: 100px;
+    background: linear-gradient(#2b2f36 0%, #717478 100%);
+
+
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-100px);
+
+    &.open {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .cols {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        li {
+            padding: 15px 0;
+            border-bottom: 2px solid #707070;
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                @include f-os-r;
+                font-size: 42px;
+                line-height: 1;
+                color: #fff;
+                transition: 0.5s;
+            }
+
+            cursor: pointer;
+            &:hover {
+                a {
+                    color: #E4EF00;
+                }
+            }
+        }
+    }
+
+    .logo {
+        margin-top: 65px;
+        font-size: 0;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .part-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        p {
+            @include f-os-l;
+            font-size: 46px;
+            color: #fff;
+            letter-spacing: 0.2em;
+        }
+
+        .sep {
+            height: 21px;
+            width: 17px;
+            border-radius: 100%;
+            background: #FF687B;
+            margin: 0 20px;
+
+            &.yellow {
+                background: #E4EF00;;
+            }
+        }
+    }
+
+    .lang-select {
+        .title {
+            @include f-os-r;
+            font-size: 42px;
+            color: #fff;
+            letter-spacing: 0.04em;
+            padding-left: 25px;
+            display: inline-block;
+            background: url("../images/icons/angle-d-w.svg") no-repeat;
+            background-position: left center;
+        }
+    }
+
+    .contacts {
+        @include f-r;
+        font-size: 17px;
+        color: #fff;
+        margin-top: 55px;
+        p {
+            margin-top: 5px;
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+        a {
+            display: block;
+            margin: 10px;
+        }
+    }
+}
+/* ---------------------- Section slider-top ---------------------- */
+section.slider-top {
+    height: 925px;
+    padding: 0;
+    margin-top: -100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .image {
+            @include flex-center;
+            overflow: hidden;
+            font-size: 0;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #000;
+                opacity: 0.53;
+            }
+            img {
+                height: 100%;
+            }
+        }
+
+        .video {
+            position: relative;
+            font-size: 0;
+            height: 100%;
+            width: 100%;
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #000;
+                opacity: 0.53;
+            }
+
+            video {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .section-inner {
+        text-align: center;
+        .logo {
+            font-size: 0;
+        }
+
+        .text {
+            @include f-l;
+            font-size: 42px;
+            color: #fff;
+            letter-spacing: 0.2em;
+
+            max-width: 980px;
+            margin: auto;
+            p {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+/* --------------------- /Section slider-top ---------------------- */
+
+/* ---------------------- Section services ---------------------- */
+section.services {
+    height: 967px;
+    position: relative;
+
+    .part-static {
+        position: relative;
+        z-index: 10;
+    }
+
+    .slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        .slide {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .parts {
+                .part {
+                    &.part-text {
+                        width: 40%;
+                    }
+                }
+            }
+            .bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                font-size: 0;
+            }
+        }
+    }
+}
+/* --------------------- /Section services ---------------------- */

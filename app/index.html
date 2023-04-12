@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+	<title>Intovision</title>
+
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<link rel="stylesheet" href="plugins/swiper/swiper.css">
+	<script src="plugins/swiper/swiper.js"></script> 
+	
+	<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css">
+	<script src="plugins/fancybox/jquery.fancybox.js"></script> 
+	
+	<script src="plugins/scrollreveal/scrollreveal.js"></script> 
+	
+	<script src="plugins/mmenu/jquery-simple-mobilemenu.js"></script>
+	<link rel="stylesheet" href="plugins/mmenu/styles/jquery-simple-mobilemenu-slide.css">
+
+
+	<script src="plugins/gsap/TweenMax.min.js"></script>
+	<script src="plugins/scrollmagic/ScrollMagic.js"></script>
+	<script src="plugins/scrollmagic/animation.gsap.js"></script>
+	<script src="plugins/scrollmagic/debug.addIndicators.js"></script>
+	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="home">
+		<div class="section-inner">
+			<div class="part-right">
+				<div class="ham-button"></div>
+			</div>	
+			<a href="#" class="logo-cont">
+				<img src="images/index/logo.png">
+			</a>
+			<div class="part-left">
+				<a href="#" class="button">בואו לעבוד <strong>אתנו</strong></a>
+			</div>
+		</div>
+
+		<div class="mobile-menu-cont">
+			<ul class="mobile_menu">
+				<li class="current_page_item"><a href="">בית</a></li>
+				<li><a href="">אודות</a></li>
+				<li class="menu-item-has-children">
+					<a href="">שירותי החברה</a>
+					<ul class="sub-menu">
+						<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+						<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+						<li class="menu-item menu-item-has-children">
+							<a href="#">ביטוח אמבולטורי</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">מימוש זכויות רפואיות</a></li>
+								<li class="menu-item"><a href="#">פתרונות פיננסיים</a></li>
+								<li class="menu-item"><a href="#">ביטוח אמבולטורי</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">ביטוח לאנשי קבע</a></li>
+				<li><a href=""> פספורטקארד</a></li>
+				<li><a href="">בלוג</a></li>
+				<li><a href="">יצירת קשר</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="menu-top">
+		<div class="section-inner">
+			<div class="cols">
+				<div class="col">
+					<div class="menu-cont">
+						<ul class="main-menu">
+							<li><a href="">עמוד הבית</a></li>
+						</ul>
+					</div>
+					<div class="logo">
+						<img src="images/index/sign.png">
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="menu-cont">
+						<ul class="main-menu">
+							<li><a href="">מה אנחנו מציעים</a></li>
+							<li><a href="">אודות</a></li>
+							<li><a href="">בלוג</a></li>
+							<li><a href="">משרות</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="lang-select">
+						<p class="title">EN</p>
+					</div>
+					<div class="contacts">
+						<p>072-3384808</p>
+						<p>oron@intovision.com</p>
+					</div>
+					<div class="social">
+						<a href="#" class="item">
+							<img src="images/icons/social/fb.svg">
+						</a>
+						<a href="#" class="item">
+							<img src="images/icons/social/inst.svg">
+						</a>
+						<a href="#" class="item">
+							<img src="images/icons/social/ln.svg">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="part-bottom">
+				<p>פיתוח הנדסה</p>
+				<div class="sep red"></div>
+				<p>עיצוב מוצרים</p>
+				<div class="sep yellow"></div>
+				<p>ייצור</p>
+			</div>
+		</div>
+	</div>
+
+	<section class="slider-top">
+		<div class="bg">
+			
+			<div class="image">
+				<img src="images/index/bg-top.png">
+			</div>
+			
+			<!--
+			<div class="video">
+				<video data-autoplay="" src="videos/top-index.mp4" autoplay="" loop="" muted="" playsinline=""></video>
+			</div>
+			-->
+		</div>
+
+		<div class="section-inner">
+			<div class="logo">
+				<img src="images/index/sign.png">
+			</div>
+			<div class="text">
+				<p>אנחנו כאן כדי ליצור ולנשום חדשנות
+					לתת פתרונות ולהגשים חלומות</p>
+			</div>
+		</div>
+	</section>
+
+	<div class="spacer s2"></div>
+	<div id="trigger1" class="spacer s0"></div>
+
+	<section class="services" id="scene-1">
+		<div class="part-static">
+			<div class="section-inner">
+				<p class="section-title centered white" id="animate1">מה אנחנו <strong>מציעים</strong></p>
+			</div>
+		</div>
+		
+		<div class="slides">
+			<div class="slide">
+				<div class="bg">
+					<img src="images/index/services/bgs/bg-1.png">
+				</div>
+				<div class="section-inner">
+					<div class="parts">
+						<div class="part part-text">
+							<p class="title-regular white">פיתוח מערכות</p>
+							<div class="content white">
+								<p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנהלפריקך תצטריק לרטי להע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת</p>
+							</div>
+							<a href="#" class="button-arrow">למעבר לגלריה של פיתוח מערכות</a>
+						</div>
+						<div class="part part-image">
+							<div class="image">
+								<img src="images/index/services/products/pr-1.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<div class="spacer s2"></div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<section class="class-name">
+		<div class="section-inner">
+			<p class="section-title">עוד אזור</p>
+		</div>
+	</section>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<section class="class-name">
+		<div class="section-inner">
+			<p class="section-title">עוד אזור</p>
+		</div>
+	</section>
+	<script>
+		$(document).ready(function ($) {
+			// init controller
+			var controller = new ScrollMagic.Controller();
+
+			var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 7000})
+					.setPin("#scene-1")
+					.setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5})
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+
+		});
+	</script>
+</body>
+</html>
