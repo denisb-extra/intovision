@@ -275,6 +275,8 @@ section.services {
 
         .slide {
             position: absolute;
+            left: 0;
+            right: 0;
             width: 100%;
             height: 100%;
             display: flex;
@@ -315,4 +317,397 @@ section.services {
 }
 #slide-4 {
     z-index: 14;
+}
+#slide-5 {
+    z-index: 15;
+}
+
+/* ---------------------- Section workers ---------------------- */
+section.workers {
+    background: url("../images/index/bg-workers.png") no-repeat;
+    background-size: cover;
+
+    .parts {
+        .part {
+            &.part-text {
+                width: 40%;
+            }
+        }
+    }
+
+    .image {
+        img {
+            position: relative;
+            right: -130px;
+        }
+    }
+}
+/* --------------------- /Section workers ---------------------- */
+
+
+/* ---------------------- Section spec ---------------------- */
+section.spec {
+    background: url("../images/index/bg-m.png") no-repeat;
+    background-size: cover;
+
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -25px;
+        margin-top: 55px;
+        .box {
+            width: 33.33%;
+            padding: 45px 25px;
+            text-align: center;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 50px;
+                bottom: 50px;
+                left: 0;
+                width: 2px;
+                background-color: #707070;
+                opacity: 0.5;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 50px;
+                right: 50px;
+                bottom: 0;
+                height: 2px;
+                background-color: #707070;
+                opacity: 0.5;
+            }
+
+            &:nth-child(3n + 3) {
+                &:after {
+                    content: none;
+                }
+            }
+
+            &:nth-last-child(1),  &:nth-last-child(2),  &:nth-last-child(3) {
+                &:before {
+                    content: none;
+                }
+            }
+
+
+            .image {
+                height: 95px;
+                font-size: 0;
+                img {
+                    max-height: 100%;
+                    margin: auto;
+                }
+            }
+
+            .text {
+                @include f-b;
+                font-size: 28px;
+                color: var(--color-text);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+/* --------------------- /Section spec ---------------------- */
+
+
+/* ---------------------- Section slider-logos-section ---------------------- */
+section.slider-logos-section {
+    background: linear-gradient(-90deg, #2b2f36 0%, #717478 100%);
+    padding: 35px 0;
+    .container-slider {
+        max-width: 1670px;
+        padding: 0 60px;
+        margin: auto;
+   
+        position: relative;
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    @include flex-center;
+                    height: auto;
+                    cursor: pointer;
+                    &:hover {
+                        img {
+                            filter: grayscale(0%);
+                        }
+                    }
+                    img {
+                        max-width: 100%;
+                        transition: 0.5s;
+                        filter: grayscale(100%);
+                    }
+                }
+            }
+        }
+        .nav {
+            position: absolute;
+            z-index: 99;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            .arrow {
+                cursor: pointer;
+                pointer-events: auto;
+            }
+        }
+    }
+}
+/* --------------------- /Section slider-logos-section ---------------------- */
+
+/* ---------------------- Section about ---------------------- */
+section.about {
+    background: linear-gradient(132deg, #e2e2e2 0%, #fff 100%);
+    .image {
+        border-radius: 16px;
+        overflow: hidden;
+        display: inline-block;
+        font-size: 0;
+    }
+
+    .subtitle {
+        @include f-r;
+        font-size: 42px;
+        color: var(--color-text);
+        margin-top: 25px;
+    }
+
+    .content {
+        margin-top: 25px;
+    }
+
+    .parts {
+        .part {
+            &.part-text {
+                width: 60%;
+            }
+        }
+    }
+    .part-image {
+        text-align: left;
+    }
+
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+        margin-top: 55px;
+        .box {
+            width: 25%;
+            padding: 15px;
+        }
+    }
+}
+/* --------------------- /Section about ---------------------- */
+
+.box-service-ani {
+    text-align: center;
+    
+    .inner {
+        position: relative;
+    }
+    .image {
+        @include flex-center;
+        font-size: 0;
+
+        overflow: hidden;
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            mix-blend-mode: multiply;
+            transition: 0.5s;
+        }
+    }
+    .text {
+        
+        p {
+            @include f-r;
+            font-size: 17px;
+            color: var(--color-text);
+            transition: 0.5s;
+        }
+
+    }
+
+    cursor: pointer;
+    &:hover {
+        .text {
+            p {
+                @include f-b;
+            }
+        }
+    }
+
+}
+
+/* ---------------------- Section work-process ---------------------- */
+section.work-process {
+    background: linear-gradient(-90deg, #2b2f36 0%, #717478 100%);
+
+    .cols {
+        display: flex;
+        margin: 0 -13px;
+        margin-top: 75px;
+        .col {
+            padding: 0 13px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .title {
+                @include f-m;
+                font-size: 20px;
+                color: #FF687B;
+                padding-right: 50px;
+                background: url("../images/index/process/sa.svg") no-repeat;
+                background-position: right 1px center;
+                margin-right: 27px;
+            }
+
+            .cont-str {
+                display: flex;
+                align-items: center;
+                margin-top: 50px;
+
+                .str {
+                    margin-right: 13px;
+                }
+            }
+
+            .rmb {
+                font-size: 0;
+                position: relative;
+                display: inline-block;
+                
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    top: -56px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 56px;
+                    width: 1px;
+                    background-color: #FF687B;
+                }
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    @include f-r;
+                    font-size: 20px;
+                    color: #fff;
+                }
+            }
+
+            .list {
+                margin-top: 50px;
+                position: relative;
+                flex-grow: 1;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    top: -50px;
+                    right: 34px;
+                    bottom: 8px;
+                    width: 1px;
+                    background-color: #FF687B;
+                }
+                .item {
+                    @include f-r;
+                    font-size: 17px;
+                    color: #fff;
+                    margin-top: 13px;
+
+                    padding-right: 50px;
+                    background: url("../images/index/process/list-str.svg") no-repeat;
+                    background-position: right 1px center;
+                    margin-right: 31px;
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+/* --------------------- /Section work-process ---------------------- */
+
+/* ---------------------- Section projects ---------------------- */
+section.projects {
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -7px;
+        margin-top: 70px;
+        .box {
+            width: 25%;
+            padding: 7px;
+        }
+    }
+}
+/* --------------------- /Section projects ---------------------- */
+
+.box-project{
+    .inner {
+        position: relative;
+    }
+    .image {
+        @include flex-center;
+        font-size: 0;
+        height: 400px;
+        overflow: hidden;
+        img {
+            height: 100%;
+        }
+    }
+    .text {
+        position: absolute;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+        .title {
+            @include f-b;
+            font-size: 24px;
+            color: #fff;
+        }
+        .subtitle {
+            @include f-r;
+            font-size: 17px;
+            color: #fff;
+        }
+
+        .button-arrow {
+            margin-top: 25px;
+        }
+    }
+
+    cursor: pointer;
+    &:hover {
+        .text {
+            opacity: 1;
+        }
+    }
 }
